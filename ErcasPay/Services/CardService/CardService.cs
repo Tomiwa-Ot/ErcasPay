@@ -7,9 +7,6 @@ using ErcasPay.Infrastructure.Http;
 using ErcasPay.Services.CardService.Response;
 using ErcasPay.Services.TransactionService;
 using ErcasPay.Services.TransactionService.Response;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace ErcasPay.Services.CardService
 {
@@ -79,7 +76,7 @@ namespace ErcasPay.Services.CardService
         /// <inheritdoc/>
         public async Task<IResponse> VerifyCardTransaction(string transactionRef)
         {
-            return await _apiClient.Send<SubmitOTPResponse>(
+            return await _apiClient.Send<VerifyCardTransactionResponse>(
                 HttpMethod.Post, $"payment/cards/transaction/verify", new {
                     reference = transactionRef
                 });
