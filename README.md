@@ -25,3 +25,4 @@ dotnet add package
 https://github.com/Tomiwa-Ot/ercaspay/wiki
 
 ### Documentation
+https://tomiwa-ot.github.io/ErcasPay/namespaces.html
