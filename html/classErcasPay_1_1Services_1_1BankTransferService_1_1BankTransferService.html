@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo-black.png"/></td>
   <td id="projectalign">
    <div id="projectname">ErcasPay<span id="projectnumber">&#160;v1.0</span>
    </div>
@@ -100,8 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0823674b44ee9568de05331bbd93a4c1" id="r_a0823674b44ee9568de05331bbd93a4c1"><td class="memItemLeft" align="right" valign="top"><a id="a0823674b44ee9568de05331bbd93a4c1" name="a0823674b44ee9568de05331bbd93a4c1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BankTransferService</b> (<a class="el" href="interfaceErcasPay_1_1Infrastructure_1_1Http_1_1IApiClient.html">IApiClient</a> apiClient, <a class="el" href="interfaceErcasPay_1_1Services_1_1TransactionService_1_1ITransactionService.html">ITransactionService</a> transactionService)</td></tr>
 <tr class="separator:a0823674b44ee9568de05331bbd93a4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a080774d9833c872145623ab6daa5bf39" id="r_a080774d9833c872145623ab6daa5bf39"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErcasPay_1_1Services_1_1BankTransferService_1_1BankTransferService.html#a080774d9833c872145623ab6daa5bf39">InitializeBankTransfer</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction)</td></tr>
-<tr class="memdesc:a080774d9833c872145623ab6daa5bf39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a bank transfer request.<dl class="params"><dt>Parameters</dt><dd>
+<tr class="memitem:a7eb7c39920b88cd1743d0fbbe0baf52a" id="r_a7eb7c39920b88cd1743d0fbbe0baf52a"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1BankTransferService_1_1Response_1_1InitializeBankTransferResponse.html">InitializeBankTransferResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErcasPay_1_1Services_1_1BankTransferService_1_1BankTransferService.html#a7eb7c39920b88cd1743d0fbbe0baf52a">InitializeBankTransfer</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction)</td></tr>
+<tr class="memdesc:a7eb7c39920b88cd1743d0fbbe0baf52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a bank transfer request.<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">transaction</td><td>Transaction details(amount, customer's name, etc)</td></tr>
   </table>
@@ -109,19 +108,19 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
   <br /></td></tr>
-<tr class="separator:a080774d9833c872145623ab6daa5bf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a7eb7c39920b88cd1743d0fbbe0baf52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Service for bank transfer payments. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a080774d9833c872145623ab6daa5bf39" name="a080774d9833c872145623ab6daa5bf39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a080774d9833c872145623ab6daa5bf39">&#9670;&#160;</a></span>InitializeBankTransfer()</h2>
+<a id="a7eb7c39920b88cd1743d0fbbe0baf52a" name="a7eb7c39920b88cd1743d0fbbe0baf52a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb7c39920b88cd1743d0fbbe0baf52a">&#9670;&#160;</a></span>InitializeBankTransfer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Services.BankTransferService.BankTransferService.InitializeBankTransfer </td>
+          <td class="memname">async Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1BankTransferService_1_1Response_1_1InitializeBankTransferResponse.html">InitializeBankTransferResponse</a> &gt; ErcasPay.Services.BankTransferService.BankTransferService.InitializeBankTransfer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a>&#160;</td>
           <td class="paramname"><em>transaction</em></td><td>)</td>
@@ -139,12 +138,12 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
  </p>
 
-<p>Implements <a class="el" href="interfaceErcasPay_1_1Services_1_1BankTransferService_1_1IBankTransferService.html#a4a13d88ce33828f9f99957adac6a104b">ErcasPay.Services.BankTransferService.IBankTransferService</a>.</p>
+<p>Implements <a class="el" href="interfaceErcasPay_1_1Services_1_1BankTransferService_1_1IBankTransferService.html#ab3255ce108351f6dd0e607ad611d8ac9">ErcasPay.Services.BankTransferService.IBankTransferService</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Services/BankTransferService/<b>BankTransferService.cs</b></li>
+<li>/home/tomiwa/Downloads/ercaspay/ErcasPay/Services/BankTransferService/<b>BankTransferService.cs</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

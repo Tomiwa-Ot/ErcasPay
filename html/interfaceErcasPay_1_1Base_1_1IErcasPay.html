@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo-black.png"/></td>
   <td id="projectalign">
    <div id="projectname">ErcasPay<span id="projectnumber">&#160;v1.0</span>
    </div>
@@ -92,23 +91,23 @@ Inheritance diagram for ErcasPay.Base.IErcasPay:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac1b1bd45599bbf53a147824061dca2a0" id="r_ac1b1bd45599bbf53a147824061dca2a0"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#ac1b1bd45599bbf53a147824061dca2a0">GetUSSDBankList</a> ()</td></tr>
-<tr class="memdesc:ac1b1bd45599bbf53a147824061dca2a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all the supported banks for USSD transfer.  <br /></td></tr>
-<tr class="separator:ac1b1bd45599bbf53a147824061dca2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19bcec95b49326f277dd71110369abf1" id="r_a19bcec95b49326f277dd71110369abf1"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a19bcec95b49326f277dd71110369abf1">PayViaCard</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Card.html">Card</a> card, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1DeviceDetails.html">DeviceDetails</a> deviceDetailsdeviceDetails, string publicKeyFilePath)</td></tr>
-<tr class="memdesc:a19bcec95b49326f277dd71110369abf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate a card transaction.  <br /></td></tr>
-<tr class="separator:a19bcec95b49326f277dd71110369abf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020dde44a3a03b3fdfe56bdf876f1c81" id="r_a020dde44a3a03b3fdfe56bdf876f1c81"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a020dde44a3a03b3fdfe56bdf876f1c81">PayViaBankTranfer</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction)</td></tr>
-<tr class="memdesc:a020dde44a3a03b3fdfe56bdf876f1c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a bank transfer request.  <br /></td></tr>
-<tr class="separator:a020dde44a3a03b3fdfe56bdf876f1c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1847166dce5881d3617c63f4606e740" id="r_af1847166dce5881d3617c63f4606e740"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#af1847166dce5881d3617c63f4606e740">PayViaUSSD</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction, string bankName)</td></tr>
-<tr class="memdesc:af1847166dce5881d3617c63f4606e740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates a USSD transaction.  <br /></td></tr>
-<tr class="separator:af1847166dce5881d3617c63f4606e740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac081afae34a3121aa792be316de796cf" id="r_ac081afae34a3121aa792be316de796cf"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#ac081afae34a3121aa792be316de796cf">SubmitOTP</a> (string transactionRef, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1OTP.html">OTP</a> otp)</td></tr>
-<tr class="memdesc:ac081afae34a3121aa792be316de796cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive OTP for card validation purposes.  <br /></td></tr>
-<tr class="separator:ac081afae34a3121aa792be316de796cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ba490233c13ed6061d4b61349f871f5" id="r_a8ba490233c13ed6061d4b61349f871f5"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a8ba490233c13ed6061d4b61349f871f5">ResendOTP</a> (string transactionRef, string gatewayReference)</td></tr>
-<tr class="memdesc:a8ba490233c13ed6061d4b61349f871f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate the OTP resend /summary&gt; </p><dl class="params"><dt>Parameters</dt><dd>
+<tr class="memitem:a9e2e1bdc5751f92f826dbd61b8e947db" id="r_a9e2e1bdc5751f92f826dbd61b8e947db"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1USSDService_1_1Response_1_1GetUSSDBankListResponse.html">GetUSSDBankListResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a9e2e1bdc5751f92f826dbd61b8e947db">GetUSSDBankList</a> ()</td></tr>
+<tr class="memdesc:a9e2e1bdc5751f92f826dbd61b8e947db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch all the supported banks for USSD transfer.  <br /></td></tr>
+<tr class="separator:a9e2e1bdc5751f92f826dbd61b8e947db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef11da65160b574a75a572a4accd4427" id="r_aef11da65160b574a75a572a4accd4427"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1InitiatePaymentResponse.html">InitiatePaymentResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#aef11da65160b574a75a572a4accd4427">PayViaCard</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Card.html">Card</a> card, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1DeviceDetails.html">DeviceDetails</a> deviceDetailsdeviceDetails, string publicKeyFilePath)</td></tr>
+<tr class="memdesc:aef11da65160b574a75a572a4accd4427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate a card transaction.  <br /></td></tr>
+<tr class="separator:aef11da65160b574a75a572a4accd4427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bc0090751003c797268bd144d62aa4" id="r_af0bc0090751003c797268bd144d62aa4"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1BankTransferService_1_1Response_1_1InitializeBankTransferResponse.html">InitializeBankTransferResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#af0bc0090751003c797268bd144d62aa4">PayViaBankTranfer</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction)</td></tr>
+<tr class="memdesc:af0bc0090751003c797268bd144d62aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a bank transfer request.  <br /></td></tr>
+<tr class="separator:af0bc0090751003c797268bd144d62aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2e0d22fa224471d08dc6f0cc938953" id="r_aef2e0d22fa224471d08dc6f0cc938953"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1USSDService_1_1Response_1_1InitiateUSSDResponse.html">InitiateUSSDResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#aef2e0d22fa224471d08dc6f0cc938953">PayViaUSSD</a> (<a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a> transaction, string bankName)</td></tr>
+<tr class="memdesc:aef2e0d22fa224471d08dc6f0cc938953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates a USSD transaction.  <br /></td></tr>
+<tr class="separator:aef2e0d22fa224471d08dc6f0cc938953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37ee01386f43198e92a8c49550a6ecc" id="r_ad37ee01386f43198e92a8c49550a6ecc"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1SubmitOTPResponse.html">SubmitOTPResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#ad37ee01386f43198e92a8c49550a6ecc">SubmitOTP</a> (string transactionRef, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1OTP.html">OTP</a> otp)</td></tr>
+<tr class="memdesc:ad37ee01386f43198e92a8c49550a6ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive OTP for card validation purposes.  <br /></td></tr>
+<tr class="separator:ad37ee01386f43198e92a8c49550a6ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7b11b650719345b42f294969ba3880" id="r_a8e7b11b650719345b42f294969ba3880"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1ResendOTPResponse.html">ResendOTPResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a8e7b11b650719345b42f294969ba3880">ResendOTP</a> (string transactionRef, string gatewayReference)</td></tr>
+<tr class="memdesc:a8e7b11b650719345b42f294969ba3880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate the OTP resend /summary&gt; </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">transactionRef</td><td><a class="el" href="namespaceErcasPay.html">ErcasPay</a> transaction reference</td></tr>
     <tr><td class="paramname">gatewayReference</td><td>Gateway reference</td></tr>
@@ -117,37 +116,37 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
  <br /></td></tr>
-<tr class="separator:a8ba490233c13ed6061d4b61349f871f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fb03629c3ab66ae09a89bb84878d579" id="r_a8fb03629c3ab66ae09a89bb84878d579"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a8fb03629c3ab66ae09a89bb84878d579">FetchTransactionDetails</a> (string transactionRef)</td></tr>
-<tr class="memdesc:a8fb03629c3ab66ae09a89bb84878d579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve detailed information about a specific transaction.  <br /></td></tr>
-<tr class="separator:a8fb03629c3ab66ae09a89bb84878d579"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f367e558959d7bf5185fb47df5ce881" id="r_a0f367e558959d7bf5185fb47df5ce881"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a0f367e558959d7bf5185fb47df5ce881">FetchTransactionStatus</a> (string transactionRef, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1TransactionStatus.html">TransactionStatus</a> transactionStatus)</td></tr>
-<tr class="memdesc:a0f367e558959d7bf5185fb47df5ce881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the status of a transaction.  <br /></td></tr>
-<tr class="separator:a0f367e558959d7bf5185fb47df5ce881"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08619c6f03153a1a2025781b1323f1fb" id="r_a08619c6f03153a1a2025781b1323f1fb"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a08619c6f03153a1a2025781b1323f1fb">VerifyTransaction</a> (string transactionRef)</td></tr>
-<tr class="memdesc:a08619c6f03153a1a2025781b1323f1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirm the actual status of a transaction.  <br /></td></tr>
-<tr class="separator:a08619c6f03153a1a2025781b1323f1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec52f6fec1c6462c3757ab597336c3e9" id="r_aec52f6fec1c6462c3757ab597336c3e9"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#aec52f6fec1c6462c3757ab597336c3e9">VerifyCardTransaction</a> (string transactionRef)</td></tr>
-<tr class="memdesc:aec52f6fec1c6462c3757ab597336c3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies a card transaction and confirms its validity.  <br /></td></tr>
-<tr class="separator:aec52f6fec1c6462c3757ab597336c3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d73e5c72d7857f2d33d46c467c2dbe7" id="r_a6d73e5c72d7857f2d33d46c467c2dbe7"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a6d73e5c72d7857f2d33d46c467c2dbe7">CancelTransaction</a> (string transactionRef)</td></tr>
-<tr class="memdesc:a6d73e5c72d7857f2d33d46c467c2dbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a transaction that has not yet been marked as completed.  <br /></td></tr>
-<tr class="separator:a6d73e5c72d7857f2d33d46c467c2dbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4972d862df5959cc0f27f9f0887ded9" id="r_af4972d862df5959cc0f27f9f0887ded9"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#af4972d862df5959cc0f27f9f0887ded9">CardDetails</a> (string transactionRef)</td></tr>
-<tr class="memdesc:af4972d862df5959cc0f27f9f0887ded9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the details of a card transaction based on the provided transaction reference.  <br /></td></tr>
-<tr class="separator:af4972d862df5959cc0f27f9f0887ded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a8e7b11b650719345b42f294969ba3880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf649a8f114e4d1c5bb1d3cf34da610" id="r_a1bf649a8f114e4d1c5bb1d3cf34da610"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1FetchTransactionDetailsResponse.html">FetchTransactionDetailsResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a1bf649a8f114e4d1c5bb1d3cf34da610">FetchTransactionDetails</a> (string transactionRef)</td></tr>
+<tr class="memdesc:a1bf649a8f114e4d1c5bb1d3cf34da610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve detailed information about a specific transaction.  <br /></td></tr>
+<tr class="separator:a1bf649a8f114e4d1c5bb1d3cf34da610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe908f31800d37e6fa2dc343a94e7cf6" id="r_afe908f31800d37e6fa2dc343a94e7cf6"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1FetchTransactionStatusResponse.html">FetchTransactionStatusResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#afe908f31800d37e6fa2dc343a94e7cf6">FetchTransactionStatus</a> (string transactionRef, <a class="el" href="classErcasPay_1_1Base_1_1Request_1_1TransactionStatus.html">TransactionStatus</a> transactionStatus)</td></tr>
+<tr class="memdesc:afe908f31800d37e6fa2dc343a94e7cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the status of a transaction.  <br /></td></tr>
+<tr class="separator:afe908f31800d37e6fa2dc343a94e7cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790ec567b81862bf122765bcf3b8be15" id="r_a790ec567b81862bf122765bcf3b8be15"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1VerifyTransactionResponse.html">VerifyTransactionResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a790ec567b81862bf122765bcf3b8be15">VerifyTransaction</a> (string transactionRef)</td></tr>
+<tr class="memdesc:a790ec567b81862bf122765bcf3b8be15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirm the actual status of a transaction.  <br /></td></tr>
+<tr class="separator:a790ec567b81862bf122765bcf3b8be15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2113c5def6b4b51575c2e209497f63cc" id="r_a2113c5def6b4b51575c2e209497f63cc"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1VerifyCardTransactionResponse.html">VerifyCardTransactionResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a2113c5def6b4b51575c2e209497f63cc">VerifyCardTransaction</a> (string transactionRef)</td></tr>
+<tr class="memdesc:a2113c5def6b4b51575c2e209497f63cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies a card transaction and confirms its validity.  <br /></td></tr>
+<tr class="separator:a2113c5def6b4b51575c2e209497f63cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a457223f05a914e8772a2a84c98396fa9" id="r_a457223f05a914e8772a2a84c98396fa9"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1CancelTransactionResponse.html">CancelTransactionResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a457223f05a914e8772a2a84c98396fa9">CancelTransaction</a> (string transactionRef)</td></tr>
+<tr class="memdesc:a457223f05a914e8772a2a84c98396fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a transaction that has not yet been marked as completed.  <br /></td></tr>
+<tr class="separator:a457223f05a914e8772a2a84c98396fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc67b62a63d5eb927e4938322bd5635" id="r_a4dc67b62a63d5eb927e4938322bd5635"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1CardDetailsResponse.html">CardDetailsResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceErcasPay_1_1Base_1_1IErcasPay.html#a4dc67b62a63d5eb927e4938322bd5635">CardDetails</a> (string transactionRef)</td></tr>
+<tr class="memdesc:a4dc67b62a63d5eb927e4938322bd5635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the details of a card transaction based on the provided transaction reference.  <br /></td></tr>
+<tr class="separator:a4dc67b62a63d5eb927e4938322bd5635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API Wrapper Interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6d73e5c72d7857f2d33d46c467c2dbe7" name="a6d73e5c72d7857f2d33d46c467c2dbe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d73e5c72d7857f2d33d46c467c2dbe7">&#9670;&#160;</a></span>CancelTransaction()</h2>
+<a id="a457223f05a914e8772a2a84c98396fa9" name="a457223f05a914e8772a2a84c98396fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a457223f05a914e8772a2a84c98396fa9">&#9670;&#160;</a></span>CancelTransaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.CancelTransaction </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1CancelTransactionResponse.html">CancelTransactionResponse</a> &gt; ErcasPay.Base.IErcasPay.CancelTransaction </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em></td><td>)</td>
@@ -165,18 +164,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a5d29f511ee16a31057a3031d90e70e53">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#ab09462c42d315722eec31282c6db7cba">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="af4972d862df5959cc0f27f9f0887ded9" name="af4972d862df5959cc0f27f9f0887ded9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4972d862df5959cc0f27f9f0887ded9">&#9670;&#160;</a></span>CardDetails()</h2>
+<a id="a4dc67b62a63d5eb927e4938322bd5635" name="a4dc67b62a63d5eb927e4938322bd5635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc67b62a63d5eb927e4938322bd5635">&#9670;&#160;</a></span>CardDetails()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.CardDetails </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1CardDetailsResponse.html">CardDetailsResponse</a> &gt; ErcasPay.Base.IErcasPay.CardDetails </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em></td><td>)</td>
@@ -194,18 +193,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#af7edba836497d3ee334862a839b03d2a">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a7febdd06015344dee1957c46935fabab">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="a8fb03629c3ab66ae09a89bb84878d579" name="a8fb03629c3ab66ae09a89bb84878d579"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fb03629c3ab66ae09a89bb84878d579">&#9670;&#160;</a></span>FetchTransactionDetails()</h2>
+<a id="a1bf649a8f114e4d1c5bb1d3cf34da610" name="a1bf649a8f114e4d1c5bb1d3cf34da610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf649a8f114e4d1c5bb1d3cf34da610">&#9670;&#160;</a></span>FetchTransactionDetails()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.FetchTransactionDetails </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1FetchTransactionDetailsResponse.html">FetchTransactionDetailsResponse</a> &gt; ErcasPay.Base.IErcasPay.FetchTransactionDetails </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em></td><td>)</td>
@@ -223,18 +222,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#afe58f4ff47f982e025c4a732bd9adc95">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a859a4558424c9d69a2c873c6de1e206f">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="a0f367e558959d7bf5185fb47df5ce881" name="a0f367e558959d7bf5185fb47df5ce881"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f367e558959d7bf5185fb47df5ce881">&#9670;&#160;</a></span>FetchTransactionStatus()</h2>
+<a id="afe908f31800d37e6fa2dc343a94e7cf6" name="afe908f31800d37e6fa2dc343a94e7cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe908f31800d37e6fa2dc343a94e7cf6">&#9670;&#160;</a></span>FetchTransactionStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.FetchTransactionStatus </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1FetchTransactionStatusResponse.html">FetchTransactionStatusResponse</a> &gt; ErcasPay.Base.IErcasPay.FetchTransactionStatus </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em>, </td>
@@ -263,18 +262,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a0e3d984daaf5cdc8d8a780418235286b">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#ab295770fe3b45a8503039bfcfd427063">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="ac1b1bd45599bbf53a147824061dca2a0" name="ac1b1bd45599bbf53a147824061dca2a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1b1bd45599bbf53a147824061dca2a0">&#9670;&#160;</a></span>GetUSSDBankList()</h2>
+<a id="a9e2e1bdc5751f92f826dbd61b8e947db" name="a9e2e1bdc5751f92f826dbd61b8e947db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2e1bdc5751f92f826dbd61b8e947db">&#9670;&#160;</a></span>GetUSSDBankList()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.GetUSSDBankList </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1USSDService_1_1Response_1_1GetUSSDBankListResponse.html">GetUSSDBankListResponse</a> &gt; ErcasPay.Base.IErcasPay.GetUSSDBankList </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -285,18 +284,18 @@ Public Member Functions</h2></td></tr>
 <p>Fetch all the supported banks for USSD transfer. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#adf267e3f87154d16c82f97ead8ea3b2d">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a4c44f91a0dd2197281d8321f5387298c">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="a020dde44a3a03b3fdfe56bdf876f1c81" name="a020dde44a3a03b3fdfe56bdf876f1c81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a020dde44a3a03b3fdfe56bdf876f1c81">&#9670;&#160;</a></span>PayViaBankTranfer()</h2>
+<a id="af0bc0090751003c797268bd144d62aa4" name="af0bc0090751003c797268bd144d62aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0bc0090751003c797268bd144d62aa4">&#9670;&#160;</a></span>PayViaBankTranfer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.PayViaBankTranfer </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1BankTransferService_1_1Response_1_1InitializeBankTransferResponse.html">InitializeBankTransferResponse</a> &gt; ErcasPay.Base.IErcasPay.PayViaBankTranfer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a>&#160;</td>
           <td class="paramname"><em>transaction</em></td><td>)</td>
@@ -314,18 +313,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a7b143a15e6473b9278236119b8458d2f">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#ab3ea1c4686c97bb7d973e88d00e27440">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="a19bcec95b49326f277dd71110369abf1" name="a19bcec95b49326f277dd71110369abf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19bcec95b49326f277dd71110369abf1">&#9670;&#160;</a></span>PayViaCard()</h2>
+<a id="aef11da65160b574a75a572a4accd4427" name="aef11da65160b574a75a572a4accd4427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef11da65160b574a75a572a4accd4427">&#9670;&#160;</a></span>PayViaCard()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.PayViaCard </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1InitiatePaymentResponse.html">InitiatePaymentResponse</a> &gt; ErcasPay.Base.IErcasPay.PayViaCard </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a>&#160;</td>
           <td class="paramname"><em>transaction</em>, </td>
@@ -368,18 +367,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a1c840208d4b59d57a5e64a8050b99069">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#ad9a3b69d34aac77ab01411bd31698455">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="af1847166dce5881d3617c63f4606e740" name="af1847166dce5881d3617c63f4606e740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1847166dce5881d3617c63f4606e740">&#9670;&#160;</a></span>PayViaUSSD()</h2>
+<a id="aef2e0d22fa224471d08dc6f0cc938953" name="aef2e0d22fa224471d08dc6f0cc938953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef2e0d22fa224471d08dc6f0cc938953">&#9670;&#160;</a></span>PayViaUSSD()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.PayViaUSSD </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1USSDService_1_1Response_1_1InitiateUSSDResponse.html">InitiateUSSDResponse</a> &gt; ErcasPay.Base.IErcasPay.PayViaUSSD </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classErcasPay_1_1Base_1_1Request_1_1Transaction.html">Transaction</a>&#160;</td>
           <td class="paramname"><em>transaction</em>, </td>
@@ -408,18 +407,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a7a7ec9ad63d872962affad04ed64b380">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#ade467b924365c466b47dd1cb45d94652">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="a8ba490233c13ed6061d4b61349f871f5" name="a8ba490233c13ed6061d4b61349f871f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ba490233c13ed6061d4b61349f871f5">&#9670;&#160;</a></span>ResendOTP()</h2>
+<a id="a8e7b11b650719345b42f294969ba3880" name="a8e7b11b650719345b42f294969ba3880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7b11b650719345b42f294969ba3880">&#9670;&#160;</a></span>ResendOTP()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.ResendOTP </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1ResendOTPResponse.html">ResendOTPResponse</a> &gt; ErcasPay.Base.IErcasPay.ResendOTP </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em>, </td>
@@ -448,18 +447,18 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 </p>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a323fa73a08d3427b53c017b7b70c6c22">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#ac1f68dd2b7d1c432177bcfedf3fc271b">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="ac081afae34a3121aa792be316de796cf" name="ac081afae34a3121aa792be316de796cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac081afae34a3121aa792be316de796cf">&#9670;&#160;</a></span>SubmitOTP()</h2>
+<a id="ad37ee01386f43198e92a8c49550a6ecc" name="ad37ee01386f43198e92a8c49550a6ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37ee01386f43198e92a8c49550a6ecc">&#9670;&#160;</a></span>SubmitOTP()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.SubmitOTP </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1SubmitOTPResponse.html">SubmitOTPResponse</a> &gt; ErcasPay.Base.IErcasPay.SubmitOTP </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em>, </td>
@@ -488,18 +487,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#ab4e383199c044ca1d299c16c8de35fde">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a225d74874b517e6ca28d9a34d6ed4a93">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="aec52f6fec1c6462c3757ab597336c3e9" name="aec52f6fec1c6462c3757ab597336c3e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec52f6fec1c6462c3757ab597336c3e9">&#9670;&#160;</a></span>VerifyCardTransaction()</h2>
+<a id="a2113c5def6b4b51575c2e209497f63cc" name="a2113c5def6b4b51575c2e209497f63cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2113c5def6b4b51575c2e209497f63cc">&#9670;&#160;</a></span>VerifyCardTransaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.VerifyCardTransaction </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1CardService_1_1Response_1_1VerifyCardTransactionResponse.html">VerifyCardTransactionResponse</a> &gt; ErcasPay.Base.IErcasPay.VerifyCardTransaction </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em></td><td>)</td>
@@ -517,18 +516,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#aaa9238c59325b51657959a53d96a8bbf">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a51dfe5bb9b9d652ce427315c5bc1511e">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
-<a id="a08619c6f03153a1a2025781b1323f1fb" name="a08619c6f03153a1a2025781b1323f1fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08619c6f03153a1a2025781b1323f1fb">&#9670;&#160;</a></span>VerifyTransaction()</h2>
+<a id="a790ec567b81862bf122765bcf3b8be15" name="a790ec567b81862bf122765bcf3b8be15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a790ec567b81862bf122765bcf3b8be15">&#9670;&#160;</a></span>VerifyTransaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="interfaceErcasPay_1_1Base_1_1Response_1_1IResponse.html">IResponse</a> &gt; ErcasPay.Base.IErcasPay.VerifyTransaction </td>
+          <td class="memname">Task&lt; <a class="el" href="classErcasPay_1_1Services_1_1TransactionService_1_1Response_1_1VerifyTransactionResponse.html">VerifyTransactionResponse</a> &gt; ErcasPay.Base.IErcasPay.VerifyTransaction </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>transactionRef</em></td><td>)</td>
@@ -546,12 +545,12 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceErcasPay.html">ErcasPay</a> API response</dd></dl>
 
-<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a8cfaa23c81a15b0aa5f6b7eca46526b1">ErcasPay.Base.ErcasPay</a>.</p>
+<p>Implemented in <a class="el" href="classErcasPay_1_1Base_1_1ErcasPay.html#a2b7a3f9d50626d1cc35b18e7bb37b71e">ErcasPay.Base.ErcasPay</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Base/<b>IErcasPay.cs</b></li>
+<li>/home/tomiwa/Downloads/ercaspay/ErcasPay/Base/<b>IErcasPay.cs</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

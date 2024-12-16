@@ -1,0 +1,16 @@
+digraph "/home/tomiwa/Downloads/ercaspay"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_2c12105386bcc5c3935feab96f296a41 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="Downloads", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_2c12105386bcc5c3935feab96f296a41.html",tooltip=""]
+  subgraph clusterdir_769228b882b18ee00e87c753c7980613 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_769228b882b18ee00e87c753c7980613.html",tooltip=""]
+    dir_769228b882b18ee00e87c753c7980613 [shape=plaintext, label="ercaspay"];
+  dir_48f598f87d6fbb52d58761b444a869ce [label="ErcasPay", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_48f598f87d6fbb52d58761b444a869ce.html",tooltip=""];
+  }
+  }
+}

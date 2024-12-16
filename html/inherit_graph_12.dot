@@ -6,6 +6,6 @@ digraph "Graphical Class Hierarchy"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
   Node0 [id="Node000000",label="ErcasPay.Services.BankTransfer\lService.IBankTransferService",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interfaceErcasPay_1_1Services_1_1BankTransferService_1_1IBankTransferService.html",tooltip="Service interface for bank transfer payments."];
-  Node0 -> Node1 [id="edge15_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node0 -> Node1 [id="edge16_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 [id="Node000001",label="ErcasPay.Services.BankTransfer\lService.BankTransferService",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classErcasPay_1_1Services_1_1BankTransferService_1_1BankTransferService.html",tooltip="Service for bank transfer payments."];
 }
