@@ -66,7 +66,7 @@ namespace ErcasPayTests
         public async Task PayViaUSSD_Test()
         {
             // Arrange 
-            var expected = new InitializeBankTransferResponse();
+            var expected = new InitiateUSSDResponse();
             _ussdServiceMock.Setup(service => service.InitiateUSSDCode(transaction, "access")).ReturnsAsync(expected);
 
             // Act
