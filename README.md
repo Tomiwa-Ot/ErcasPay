@@ -18,7 +18,7 @@ This SDK for .Net Core is a wrapper around ErcasPay payment gateway's Direct Int
 
 ### Installation
 ```
-dotnet add package 
+dotnet add package ErcasPay.12.16.24.001 --version 1.0.0
 ```
 
 ### Usage
