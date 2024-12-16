@@ -43,7 +43,6 @@ namespace ErcasPay.Services.CardService
             }
 
             string publicKey = File.ReadAllText(publicKeyFilePath);
-            Console.WriteLine(publicKey);
             if (string.IsNullOrEmpty(publicKey))
             {
                 throw new ConfigurationException("Public key not found in configuration");

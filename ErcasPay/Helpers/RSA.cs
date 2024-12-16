@@ -18,9 +18,12 @@ namespace ErcasPay.Helpers
         /// <returns>RSA encrypted string</returns>
         public static string EncryptCard(string publicKey, Card card)
         {
+            // Remove forward slash in card expiry data and json encode
             card.expiryDate.Replace("/", "");
+            string json = System.Text.Json.JsonSerializer.Serialize(card);
+            
+            // Encrypt json using RSA and public key
             publicKey.Replace("RSA", "").Trim();
-            string json = JsonConvert.SerializeObject(card);
             using (System.Security.Cryptography.RSA rsa = System.Security.Cryptography.RSA.Create())
             {
                 // Import the public key (from PEM format)
@@ -30,7 +33,7 @@ namespace ErcasPay.Helpers
                 byte[] dataBytes = Encoding.UTF8.GetBytes(json);
 
                 // Encrypt the data
-                return Convert.ToBase64String(rsa.Encrypt(dataBytes, RSAEncryptionPadding.OaepSHA256));
+                return Convert.ToBase64String(rsa.Encrypt(dataBytes, RSAEncryptionPadding.Pkcs1));
             }
         }
     }

@@ -35,7 +35,7 @@ namespace ErcasPay.Services.TransactionService
         public async Task<IResponse> FetchTransactionStatus(string transactionRef, TransactionStatus transactionStatus)
         {
             return await _apiClient.Send<FetchTransactionStatusResponse>(
-                HttpMethod.Post, $"payment/status/${transactionRef}", transactionStatus);
+                HttpMethod.Post, $"payment/status/{transactionRef}", transactionStatus);
         }
 
         /// <inheritdoc/>

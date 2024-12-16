@@ -28,10 +28,11 @@ namespace ErcasPay.Infrastructure.Http
             HttpClient client = _httpClientFactory.CreateClient();
             HttpRequestMessage request = await BuildRequest(method, endpoint, body);            
 
+            // Send http request
             HttpResponseMessage response = await client.SendAsync(request);
             string responseBody = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine(responseBody);
+            // Deserialize json response into specified model
             T result = JsonConvert.DeserializeObject<T>(responseBody);
             result.HttpCode = (long)response.StatusCode;
 
@@ -48,6 +49,7 @@ namespace ErcasPay.Infrastructure.Http
         /// <exception cref="ConfigurationException">Occurs if Base URL or Authorization key is missing from appsettings</exception>
         private async Task<HttpRequestMessage> BuildRequest(HttpMethod method, string endpoint, object? body)
         {
+            // Load ercaspay base url from appsettings
             string baseUrl = _configuration.GetSection("ErcasPay:BaseUrl").Value.EndsWith("/") ?
                 $"{_configuration.GetSection("ErcasPay:BaseUrl").Value}{endpoint}" :
                 $"{_configuration.GetSection("ErcasPay:BaseUrl").Value}/{endpoint}";
@@ -57,12 +59,14 @@ namespace ErcasPay.Infrastructure.Http
                 throw new ConfigurationException("Base URL not found in configuration");
             }
 
+            // Load authorization token from appsettings
             string authorizationKey = _configuration.GetSection("ErcasPay:Authorization").Value;
             if (string.IsNullOrEmpty(authorizationKey))
             {
                 throw new ConfigurationException("Authorization key not found in configuration");
             }
 
+            // Build HTTP request header and body
             HttpRequestMessage request = new HttpRequestMessage(method, new Uri(baseUrl));
             request.Headers.Add("Accept", "application/json");
             request.Headers.Add("Authorization", $"Bearer {authorizationKey}");
@@ -74,8 +78,6 @@ namespace ErcasPay.Infrastructure.Http
                     Encoding.UTF8, 
                     "application/json"
                 );
-                var s = await request.Content.ReadAsStringAsync();
-            Console.WriteLine(s);
             }
 
             return request;
