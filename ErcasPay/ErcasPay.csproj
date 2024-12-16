@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>ErcasPay.12.16.24.001</PackageId>
+    <PackageId>ErcasPay.12.16.24.002</PackageId>
     <Version>1.0.0</Version>
     <Authors>Olorunfemi-Ojo Tomiwa</Authors>
     <Company>ErcasPay</Company>
