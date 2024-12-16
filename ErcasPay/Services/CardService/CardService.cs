@@ -1,3 +1,4 @@
+using System.Text.Json;
 using ErcasPay.Base;
 using ErcasPay.Base.Request;
 using ErcasPay.Base.Response;
@@ -26,20 +27,20 @@ namespace ErcasPay.Services.CardService
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> CardDetails(string transactionRef)
+        public async Task<CardDetailsResponse> CardDetails(string transactionRef)
         {
             return await _apiClient.Send<CardDetailsResponse>(
                 HttpMethod.Get, $"payment/cards/details/{transactionRef}");
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> InitiatePayment(Transaction transaction, Card card, DeviceDetails _deviceDetails, string publicKeyFilePath)
+        public async Task<InitiatePaymentResponse> InitiatePayment(Transaction transaction, Card card, DeviceDetails _deviceDetails, string publicKeyFilePath)
         {
             transaction.paymentMethods = TransactionHelper.GetPaymentMethod(PaymentMethod.card);
             InitiateTransactionResponse initiatedTransaction = (InitiateTransactionResponse)await _transactionService.InitiateTransaction(transaction);
             if (!initiatedTransaction.RequestSuccessful)
             {
-                return initiatedTransaction;
+                throw new TransactionException(JsonSerializer.Serialize(initiatedTransaction));
             }
 
             string publicKey = File.ReadAllText(publicKeyFilePath);
@@ -57,7 +58,7 @@ namespace ErcasPay.Services.CardService
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> ResendOTP(string transactionRef, string _gatewayReference)
+        public async Task<ResendOTPResponse> ResendOTP(string transactionRef, string _gatewayReference)
         {
             return await _apiClient.Send<ResendOTPResponse>(
                 HttpMethod.Post, $"payment/cards/otp/resend/{transactionRef}", new {
@@ -66,14 +67,14 @@ namespace ErcasPay.Services.CardService
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> SubmitOTP(string transactionRef, OTP otp)
+        public async Task<SubmitOTPResponse> SubmitOTP(string transactionRef, OTP otp)
         {
             return await _apiClient.Send<SubmitOTPResponse>(
                 HttpMethod.Post, $"payment/cards/otp/submit/{transactionRef}", otp);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> VerifyCardTransaction(string transactionRef)
+        public async Task<VerifyCardTransactionResponse> VerifyCardTransaction(string transactionRef)
         {
             return await _apiClient.Send<VerifyCardTransactionResponse>(
                 HttpMethod.Post, $"payment/cards/transaction/verify", new {

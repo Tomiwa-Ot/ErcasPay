@@ -1,4 +1,6 @@
 using ErcasPay.Base.Response;
+using ErcasPay.Helpers;
+using Newtonsoft.Json;
 
 namespace ErcasPay.Services.CardService.Response
 {
@@ -8,6 +10,8 @@ namespace ErcasPay.Services.CardService.Response
     public class VerifyCardTransactionResponse : IResponse
     {
         /// <inheritdoc/>
+        [JsonProperty("ResponseBody")]
+        [Newtonsoft.Json.JsonConverter(typeof(SafePropertyConverter<VerifyCardTransactionResponseBody>))]
         public VerifyCardTransactionResponseBody ResponseBody { get; set; }
 
         /// <inheritdoc/>

@@ -35,22 +35,22 @@ namespace ErcasPay.Services.CardService.Response
     /// </summary>
     public class SubmitOTPResponseBody
     {
-        public string Status { get; set; }
+        public string? Status { get; set; }
 
         /// <summary>
         /// Gateway message
         /// </summary>
-        public string GatewayMessage { get; set; }
+        public string? GatewayMessage { get; set; }
 
         /// <summary>
         /// Transaction reference
         /// </summary>
-        public string TransactionReference { get; set; }
+        public string? TransactionReference { get; set; }
 
         /// <summary>
         /// Payment reference
         /// </summary>
-        public string PaymentReference { get; set; }
+        public string? PaymentReference { get; set; }
 
         /// <summary>
         /// Amount
@@ -60,6 +60,6 @@ namespace ErcasPay.Services.CardService.Response
         /// <summary>
         /// Callback url
         /// </summary>
-        public string CallbackUrl { get; set; }
+        public string? CallbackUrl { get; set; }
     }
 }

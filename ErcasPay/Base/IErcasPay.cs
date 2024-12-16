@@ -1,5 +1,9 @@
 using ErcasPay.Base.Request;
 using ErcasPay.Base.Response;
+using ErcasPay.Services.BankTransferService.Response;
+using ErcasPay.Services.CardService.Response;
+using ErcasPay.Services.TransactionService.Response;
+using ErcasPay.Services.USSDService.Response;
 
 namespace ErcasPay.Base
 {
@@ -12,7 +16,7 @@ namespace ErcasPay.Base
         /// Fetch all the supported banks for USSD transfer
         /// </summary>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> GetUSSDBankList();
+        Task<GetUSSDBankListResponse> GetUSSDBankList();
 
         /// <summary>
         /// Initiate a card transaction
@@ -22,14 +26,14 @@ namespace ErcasPay.Base
         /// <param name="deviceDetails">Device details</param>
         /// <param name="publicKeyFilePath">RSA public key for encrypting card</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> PayViaCard(Transaction transaction, Card card, DeviceDetails deviceDetailsdeviceDetails, string publicKeyFilePath);
+        Task<InitiatePaymentResponse> PayViaCard(Transaction transaction, Card card, DeviceDetails deviceDetailsdeviceDetails, string publicKeyFilePath);
 
         /// <summary>
         /// Initialize a bank transfer request
         /// </summary>
         /// <param name="transaction">Transaction details(amount, customer's name, etc)</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> PayViaBankTranfer(Transaction transaction);
+        Task<InitializeBankTransferResponse> PayViaBankTranfer(Transaction transaction);
 
         /// <summary>
         /// Initiates a USSD transaction
@@ -37,7 +41,7 @@ namespace ErcasPay.Base
         /// <param name="transaction">Transaction details(amount, customer's name, etc)</param>
         /// <param name="bankName">Name of bank</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> PayViaUSSD(Transaction transaction, string bankName);
+        Task<InitiateUSSDResponse> PayViaUSSD(Transaction transaction, string bankName);
 
         /// <summary>
         /// Receive OTP for card validation purposes
@@ -45,7 +49,7 @@ namespace ErcasPay.Base
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <param name="otp">One time password and gateway reference</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> SubmitOTP(string transactionRef, OTP otp);
+        Task<SubmitOTPResponse> SubmitOTP(string transactionRef, OTP otp);
 
         /// <summary>
         /// Initiate the OTP resend
@@ -53,14 +57,14 @@ namespace ErcasPay.Base
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <param name="gatewayReference">Gateway reference</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> ResendOTP(string transactionRef, string gatewayReference);
+        Task<ResendOTPResponse> ResendOTP(string transactionRef, string gatewayReference);
 
         /// <summary>
         /// Retrieve detailed information about a specific transaction
         /// </summary>
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> FetchTransactionDetails(string transactionRef);
+        Task<FetchTransactionDetailsResponse> FetchTransactionDetails(string transactionRef);
 
         /// <summary>
         /// Retrieves the status of a transaction
@@ -68,34 +72,34 @@ namespace ErcasPay.Base
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <param name="transactionStatus">Merchant reference and payment method</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> FetchTransactionStatus(string transactionRef, TransactionStatus transactionStatus);
+        Task<FetchTransactionStatusResponse> FetchTransactionStatus(string transactionRef, TransactionStatus transactionStatus);
 
         /// /// <summary>
         /// Confirm the actual status of a transaction
         /// </summary>
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> VerifyTransaction(string transactionRef);
+        Task<VerifyTransactionResponse> VerifyTransaction(string transactionRef);
 
         /// <summary>
         /// Verifies a card transaction and confirms its validity
         /// </summary>
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> VerifyCardTransaction(string transactionRef);
+        Task<VerifyCardTransactionResponse> VerifyCardTransaction(string transactionRef);
 
         /// <summary>
         /// Cancel a transaction that has not yet been marked as completed
         /// </summary>
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> CancelTransaction(string transactionRef);
+        Task<CancelTransactionResponse> CancelTransaction(string transactionRef);
 
         /// <summary>
         /// Retrieve the details of a card transaction based on the provided transaction reference
         /// </summary>
         /// <param name="transactionRef">ErcasPay transaction reference</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> CardDetails(string transactionRef);
+        Task<CardDetailsResponse> CardDetails(string transactionRef);
     }
 }

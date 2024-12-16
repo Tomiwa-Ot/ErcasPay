@@ -1,9 +1,13 @@
 using ErcasPay.Base.Request;
 using ErcasPay.Base.Response;
 using ErcasPay.Services.BankTransferService;
+using ErcasPay.Services.BankTransferService.Response;
 using ErcasPay.Services.CardService;
+using ErcasPay.Services.CardService.Response;
 using ErcasPay.Services.TransactionService;
+using ErcasPay.Services.TransactionService.Response;
 using ErcasPay.Services.USSDService;
+using ErcasPay.Services.USSDService.Response;
 
 namespace ErcasPay.Base
 {
@@ -28,73 +32,73 @@ namespace ErcasPay.Base
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> CancelTransaction(string transactionRef)
+        public async Task<CancelTransactionResponse> CancelTransaction(string transactionRef)
         {
             return await _transactionService.CancelTransaction(transactionRef);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> CardDetails(string transactionRef)
+        public async Task<CardDetailsResponse> CardDetails(string transactionRef)
         {
             return await _cardService.CardDetails(transactionRef);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> FetchTransactionDetails(string transactionRef)
+        public async Task<FetchTransactionDetailsResponse> FetchTransactionDetails(string transactionRef)
         {
             return await _transactionService.FetchTransactionDetails(transactionRef);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> FetchTransactionStatus(string transactionRef, TransactionStatus transactionStatus)
+        public async Task<FetchTransactionStatusResponse> FetchTransactionStatus(string transactionRef, TransactionStatus transactionStatus)
         {
             return await _transactionService.FetchTransactionStatus(transactionRef, transactionStatus);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> GetUSSDBankList()
+        public async Task<GetUSSDBankListResponse> GetUSSDBankList()
         {
             return await _ussdService.GetBankList();
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> PayViaBankTranfer(Transaction transaction)
+        public async Task<InitializeBankTransferResponse> PayViaBankTranfer(Transaction transaction)
         {
             return await _bankTransferService.InitializeBankTransfer(transaction);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> PayViaCard(Transaction transaction, Card card, DeviceDetails deviceDetails, string publicKeyFilePath)
+        public async Task<InitiatePaymentResponse> PayViaCard(Transaction transaction, Card card, DeviceDetails deviceDetails, string publicKeyFilePath)
         {
             return await _cardService.InitiatePayment(transaction, card, deviceDetails, publicKeyFilePath);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> PayViaUSSD(Transaction transaction, string bankName)
+        public async Task<InitiateUSSDResponse> PayViaUSSD(Transaction transaction, string bankName)
         {
             return await _ussdService.InitiateUSSDCode(transaction, bankName);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> ResendOTP(string transactionRef, string gatewayReference)
+        public async Task<ResendOTPResponse> ResendOTP(string transactionRef, string gatewayReference)
         {
             return await _cardService.ResendOTP(transactionRef, gatewayReference);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> SubmitOTP(string transactionRef, OTP otp)
+        public async Task<SubmitOTPResponse> SubmitOTP(string transactionRef, OTP otp)
         {
             return await _cardService.SubmitOTP(transactionRef, otp);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> VerifyCardTransaction(string transactionRef)
+        public async Task<VerifyCardTransactionResponse> VerifyCardTransaction(string transactionRef)
         {
             return await _cardService.VerifyCardTransaction(transactionRef);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> VerifyTransaction(string transactionRef)
+        public async Task<VerifyTransactionResponse> VerifyTransaction(string transactionRef)
         {
             return await _transactionService.VerifyTransaction(transactionRef);
         }

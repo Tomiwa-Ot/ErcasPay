@@ -1,5 +1,6 @@
 using ErcasPay.Base.Request;
 using ErcasPay.Base.Response;
+using ErcasPay.Services.BankTransferService.Response;
 
 namespace ErcasPay.Services.BankTransferService
 {
@@ -13,6 +14,6 @@ namespace ErcasPay.Services.BankTransferService
         /// </summary>
         /// <param name="transaction">Transaction details(amount, customer's name, etc)</param>
         /// <returns>ErcasPay API response</returns>
-        Task<IResponse> InitializeBankTransfer(Transaction transaction);
+        Task<InitializeBankTransferResponse> InitializeBankTransfer(Transaction transaction);
     }
 }

@@ -6,6 +6,8 @@ using ErcasPay.Base.Request;
 using ErcasPay.Helpers;
 using ErcasPay.Base;
 using ErcasPay.Services.TransactionService.Response;
+using System.Text.Json;
+using ErcasPay.Exceptions;
 
 namespace ErcasPay.Services.USSDService
 {
@@ -25,7 +27,7 @@ namespace ErcasPay.Services.USSDService
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> GetBankList()
+        public async Task<GetUSSDBankListResponse> GetBankList()
         {
             return await _apiClient.
                 Send<GetUSSDBankListResponse>(
@@ -33,13 +35,13 @@ namespace ErcasPay.Services.USSDService
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> InitiateUSSDCode(Transaction transaction, string bankName)
+        public async Task<InitiateUSSDResponse> InitiateUSSDCode(Transaction transaction, string bankName)
         {
             transaction.paymentMethods = TransactionHelper.GetPaymentMethod(PaymentMethod.ussd);
             InitiateTransactionResponse initiatedTransaction = (InitiateTransactionResponse)await _transactionService.InitiateTransaction(transaction);
             if (!initiatedTransaction.RequestSuccessful)
             {
-                return initiatedTransaction;
+                throw new TransactionException(JsonSerializer.Serialize(initiatedTransaction));
             }
             
             return await _apiClient.

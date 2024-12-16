@@ -18,35 +18,35 @@ namespace ErcasPay.Services.TransactionService
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> CancelTransaction(string transactionRef)
+        public async Task<CancelTransactionResponse> CancelTransaction(string transactionRef)
         {
             return await _apiClient.Send<CancelTransactionResponse>(
                 HttpMethod.Get, $"payment/cancel/{transactionRef}");
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> FetchTransactionDetails(string transactionRef)
+        public async Task<FetchTransactionDetailsResponse> FetchTransactionDetails(string transactionRef)
         {
             return await _apiClient.Send<FetchTransactionDetailsResponse>(
                 HttpMethod.Get, $"payment/details/{transactionRef}");
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> FetchTransactionStatus(string transactionRef, TransactionStatus transactionStatus)
+        public async Task<FetchTransactionStatusResponse> FetchTransactionStatus(string transactionRef, TransactionStatus transactionStatus)
         {
             return await _apiClient.Send<FetchTransactionStatusResponse>(
                 HttpMethod.Post, $"payment/status/{transactionRef}", transactionStatus);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> InitiateTransaction(Transaction transaction)
+        public async Task<InitiateTransactionResponse> InitiateTransaction(Transaction transaction)
         {
             return await _apiClient.Send<InitiateTransactionResponse>(
                 HttpMethod.Post, $"payment/initiate", transaction);
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> VerifyTransaction(string transactionRef)
+        public async Task<VerifyTransactionResponse> VerifyTransaction(string transactionRef)
         {
             return await _apiClient.Send<VerifyTransactionResponse>(
                 HttpMethod.Get, $"payment/transaction/verify/{transactionRef}");

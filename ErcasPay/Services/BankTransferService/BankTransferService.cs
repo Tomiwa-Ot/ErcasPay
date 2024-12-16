@@ -8,6 +8,7 @@ using ErcasPay.Services.TransactionService;
 using ErcasPay.Services.TransactionService.Response;
 using System.Text.Json;
 using Newtonsoft.Json;
+using ErcasPay.Exceptions;
 
 namespace ErcasPay.Services.BankTransferService
 {
@@ -27,14 +28,14 @@ namespace ErcasPay.Services.BankTransferService
         }
 
         /// <inheritdoc/>
-        public async Task<IResponse> InitializeBankTransfer(Transaction transaction)
+        public async Task<InitializeBankTransferResponse> InitializeBankTransfer(Transaction transaction)
         {
             transaction.paymentMethods = TransactionHelper.GetPaymentMethod(PaymentMethod.bank_transfer);
             InitiateTransactionResponse initiatedTransaction = (InitiateTransactionResponse)await _transactionService.InitiateTransaction(transaction);
             
             if (!initiatedTransaction.RequestSuccessful)
             {
-                return initiatedTransaction;
+                throw new TransactionException(System.Text.Json.JsonSerializer.Serialize(initiatedTransaction));
             }
             
             return await _apiClient.Send<InitializeBankTransferResponse>(

@@ -47,19 +47,54 @@ namespace ErcasPay.Services.CardService.Response
         public string Status { get; set; }
 
         /// <summary>
+        /// Eci flag
+        /// </summary>
+        public string? EciFlag { get; set; }
+
+        /// <summary>
+        /// Transaction ID
+        /// </summary>
+        public string? TransactionId { get; set; }
+
+        /// <summary>
+        /// Transaction ref
+        /// </summary>
+        public string? TransactionRef { get; set; }
+
+        /// <summary>
+        /// Transaction auth
+        /// </summary>
+        public string? TransactionAuth { get; set; }
+
+        /// <summary>
+        /// Transaction auth link
+        /// </summary>
+        public string? TransactionAuthLink { get; set; }
+
+        /// <summary>
         /// Gateway message
         /// </summary>
-        public string GatewayMessage { get; set; }
+        public string? GatewayMessage { get; set; }
+
+        /// <summary>
+        /// Gateway reference
+        /// </summary>
+        public string? GatewayReference { get; set; }
+
+        /// <summary>
+        /// Support message
+        /// </summary>
+        public string? SupportMessage { get; set; }
 
         /// <summary>
         /// Transaction reference
         /// </summary>
-        public string TransactionReference { get; set; }
+        public string? TransactionReference { get; set; }
 
         /// <summary>
         /// Payment reference
         /// </summary>
-        public string PaymentReference { get; set; }
+        public string? PaymentReference { get; set; }
 
         /// <summary>
         /// Amount
@@ -69,6 +104,11 @@ namespace ErcasPay.Services.CardService.Response
         /// <summary>
         /// Redirect url
         /// </summary>
-        public string RedirectUrl { get; set; }
+        public string? RedirectUrl { get; set; }
+
+        /// <summary>
+        /// Callback Url
+        /// </summary>
+        public string? CallbackUrl { get; set; }
     }
 }
